@@ -1,0 +1,5 @@
+mido==1.2.8
+numpy==1.14.3
+pretty-midi==0.2.8
+six==1.11.0
+torch==0.4.1
