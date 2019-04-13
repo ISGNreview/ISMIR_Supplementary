@@ -21,7 +21,7 @@ import model_parameters as param
 import model_constants as cons
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-mode", "--sessMode", type=str, default='train', help="train or test or testAll")
+parser.add_argument("-mode", "--sessMode", type=str, default='test', help="train or test or testAll")
 parser.add_argument("-path", "--testPath", type=str, default="./test_pieces/mozart545-1/", help="folder path of test mat")
 parser.add_argument("-data", "--dataName", type=str, default="ismir_data", help="dat file name")
 parser.add_argument("--resume", type=str, default="_best.pth.tar", help="best model path")
