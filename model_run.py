@@ -23,7 +23,7 @@ import model_constants as cons
 parser = argparse.ArgumentParser()
 parser.add_argument("-mode", "--sessMode", type=str, default='train', help="train or test or testAll")
 parser.add_argument("-path", "--testPath", type=str, default="./test_pieces/mozart545-1/", help="folder path of test mat")
-parser.add_argument("-data", "--dataName", type=str, default="hierarchy_test", help="dat file name")
+parser.add_argument("-data", "--dataName", type=str, default="ismir_data", help="dat file name")
 parser.add_argument("--resume", type=str, default="_best.pth.tar", help="best model path")
 parser.add_argument("-tempo", "--startTempo", type=int, default=0, help="start tempo. zero to use xml first tempo")
 parser.add_argument("-trill", "--trainTrill", default=False, type=lambda x: (str(x).lower() == 'true'), help="train trill")
@@ -31,7 +31,7 @@ parser.add_argument("--beatTempo", type=bool, default=True, help="cal tempo from
 parser.add_argument("-voice", "--voiceEdge", default=True, type=lambda x: (str(x).lower() == 'true'), help="network in voice level")
 parser.add_argument("-vel", "--velocity", type=str, default='50,65', help="mean velocity of piano and forte")
 parser.add_argument("-dev", "--device", type=int, default=1, help="cuda device number")
-parser.add_argument("-code", "--modelCode", type=str, default='han_measure_test', help="code name for saving the model")
+parser.add_argument("-code", "--modelCode", type=str, default='han-m_note_ar', help="code name for saving the model")
 parser.add_argument("-tCode", "--trillCode", type=str, default='trill_default', help="code name for loading trill model")
 parser.add_argument("-comp", "--composer", type=str, default='Chopin', help="composer name of the input piece")
 parser.add_argument("--latent", type=float, default=0, help='initial_z value')
@@ -40,7 +40,7 @@ parser.add_argument("-loss", "--trainingLoss", type=str, default='MSE', help='ty
 parser.add_argument("-reTrain", "--resumeTraining", default=False, type=lambda x: (str(x).lower() == 'true'), help='resume training after loading model')
 parser.add_argument("-perf", "--perfName", default='Anger_sub1', type=str, help='resume training after loading model')
 parser.add_argument("-delta", "--deltaLoss", default=True, type=lambda x: (str(x).lower() == 'true'), help="network in voice level")
-parser.add_argument("-hCode", "--hierCode", type=str, default='han_measure', help="code name for loading hierarchy model")
+parser.add_argument("-hCode", "--hierCode", type=str, default='han_measure_altv', help="code name for loading hierarchy model")
 
 
 args = parser.parse_args()
